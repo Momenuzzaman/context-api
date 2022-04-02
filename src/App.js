@@ -9,8 +9,8 @@ export const CategoryContext = createContext();
 function App() {
   const [count,setCount]=useState(0);
   return (
-    <CategoryContext.Provider value={count}>
-      <Header count={count} setCount={setCount}></Header>
+    <CategoryContext.Provider value={[count,setCount]}>
+      <Header></Header>
       <Home></Home>
       <Shipment></Shipment>
     </CategoryContext.Provider>
